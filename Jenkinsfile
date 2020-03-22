@@ -25,6 +25,7 @@ pipeline {
 
       stage('Build and Push Image') {
          steps {
+           echo ${BUILD_ID}
            sh 'docker image build -t ${REPOSITORY_TAG} .'
          }
       }
